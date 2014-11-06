@@ -1,0 +1,19 @@
+InputStream is = conn.getInputStream();
+
+BufferedInputStream bis = new BufferedInputStream(is);
+
+byte bytearray[] = new byte[1024];
+
+int current= -1;
+
+int i=0;
+
+while((current=bis.read())!=-1) {
+
+bytearray[i] =(byte) current;
+
+i++;
+
+}
+
+resultData = new String (bytearray,"GB2312")
